@@ -22,7 +22,7 @@
                 color: red;
                 font-size: 32px;
                 font-weight: bold;
-                border-bottom: 2px solid black;  
+                border-bottom: 2px solid black;
             }
             #leftstring {
                 color: #ffa500;
@@ -39,14 +39,14 @@
                 float: left;
                 width: 229px;
             }
-            #mainzone p {
+            #mainzone p, ul {
                 padding-left: 15px;
             }
             footer {
-                border-top: 2px solid black;;
+                border-top: 2px solid black;
                 background: #9f9f9f9f;
                 color: white;
-                font-family: sans-serif; 
+                font-family: sans-serif;
                 padding: 10px;
             }
             h1 {
@@ -70,14 +70,39 @@
                 text-transform: uppercase;
                 color: #ffffff;
             }
-            a {
-                text-decoration: none;
-            }
             #iLoveDina {
                 font-size: 25px;
                 text-decoration: none;
             }
+
+            ul {
+                list-style-type: none;
+            }
+
+            /*Стили после нажатия кнопки*/
+
+            .new #container {
+                background-color: red;
+             }
+            .new #heading {
+                background-color: #00ed00;
+                color: blue;
+            }
+            .new #leftstring {
+                color: blue;
+                background-color:hotpink;
+            }
+            .new h1 {
+                color: #00ff00;
+            }
+            .new #mainzone p {
+                color: white;
+            }
+            .new #mainzone li {
+                color: white;
+            }
         </style>
+
     </head>
     <body>
     <div id = "container">
@@ -97,22 +122,27 @@
                 Скоро я уеду от моря. И по-этому надо накупаться, чтобы хватило надолго!
             </p>
             <h1>Режим</h1>
-            <p> 9:00 (или раньше) - завтрак<br>
-                9:30 или 10:00 - на море<br>
-                12:00 или 13:00 - перекус<br>
-                12:30 или 13:30 - свободное время<br>
-                14:00 - обед<br>
-                14:30 или 15:00 - выпечка (по желанию. Если нет - свободное время)<br>
-                17:00 - гироскутеры и прочее (через день)<br>
-                19:30 - ужин<br>
-                21:00 - игры (если заслужили)<br>
-                22:00 - молитва и чтение<br>
-                Когда кто хочет (но не после 00:00) - сон</p>
+            <ul><li>9:00 (или раньше) - завтрак</li>
+                <li>9:30 или 10:00 - на море</li>
+                <li>12:00 или 13:00 - перекус</li>
+                <li>12:30 или 13:30 - свободное время</li>
+                <li>14:00 - обед</li>
+                <li>14:30 или 15:00 - выпечка (по желанию. Если нет - свободное время)</li>
+                <li>17:00 - гироскутеры и прочее (через день)</li>
+                <li>19:30 - ужин</li>
+                <li>21:00 - игры (если заслужили)</li>
+                <li>22:00 - молитва и чтение</li>
+                <li>Когда кто хочет (но не после 00:00) - сон</li></ul>
             <h1>Таинственная кнопка</h1>
-            <a href = "Открытка для Дины - копия.html"><button>НАЖМИ НА МЕНЯ!!!</button></a>
+            <button OnClick="changeStyle();">НАЖМИ НА МЕНЯ!!!</button>
         </div>
         <div class = "clear"></div>
         <footer>Автор: Алексей Громов, И всё остальное: Алексей Громов<sup></sup></footer>
         </div>
+    <script type="text/javascript">
+      function changeStyle() {
+        document.body.classList.add('new');
+      }
+    </script>
     </body>
 </html>
