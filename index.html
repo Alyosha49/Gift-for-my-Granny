@@ -141,7 +141,12 @@
         </div>
     <script type="text/javascript">
       function changeStyle() {
-        document.body.classList.add('new');
+        if(document.body.classList.contains('new')) {
+            document.body.classList.remove('new');
+        } else
+        {
+            document.body.classList.add('new');
+        }
       }
     </script>
     </body>
