@@ -81,28 +81,54 @@
 
             /*Стили после нажатия кнопки*/
             
-            body.new {
+            body.second {
                 background: pink;
             }
 
-            .new #container {
+            .second #container {
                 background-color: red;
              }
-            .new #heading {
+            .second #heading {
                 background-color: #00ed00;
                 color: blue;
             }
-            .new #leftstring {
+            .second #leftstring {
                 color: blue;
                 background-color:hotpink;
             }
-            .new h1 {
+            .second h1 {
                 color: #00ff00;
             }
-            .new #mainzone p {
+            .second #mainzone p {
                 color: white;
             }
-            .new #mainzone li {
+            .second #mainzone li {
+                color: white;
+            }
+
+
+            body.third {
+                background: greenyellow;
+            }
+
+            .third #container {
+                background-color: skyblue;
+             }
+            .third #heading {
+                background-color: #00ed00;
+                color: yellow;
+            }
+            .third #leftstring {
+                color: yellow;
+                background-color:rgb(0, 168, 168);
+            }
+            .third h1 {
+                color: blue;
+            }
+            .third #mainzone p {
+                color: white;
+            }
+            .third #mainzone li {
                 color: white;
             }
         </style>
@@ -145,10 +171,14 @@
         </div>
     <script type="text/javascript">
       function changeStyle() {
-        if (document.body.classList.contains('new')) {
-            document.body.classList.remove('new');
+        if (document.body.classList.contains('second')) {
+            document.body.classList.remove('second');
+            document.body.classList.add('third');
+        } else if (document.body.classList.contains('third')) {
+            document.body.classList.remove('third');
+            
         } else {
-            document.body.classList.add('new');
+            document.body.classList.add('second');
         }
       }
     </script>
